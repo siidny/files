@@ -26,7 +26,7 @@
                 try {
                     const response = await axios.get(gsheetURL);
                     this.parseData(response);
-                    // this.initialLoad = false;
+                    this.initialLoad = false;
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
