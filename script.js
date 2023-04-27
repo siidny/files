@@ -26,7 +26,7 @@
                 try {
                     const response = await axios.get(gsheetURL);
                     this.parseData(response);
-                    this.initialLoad = false;
+                    //this.initialLoad = false;
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
@@ -77,9 +77,9 @@
                     return Math.ceil(this.titlesToDisplay.length / this.itemsPerPage);
                 },
                 titlesToDisplay() {
-                    if (this.initialLoad) {
-                        return [];
-                    }
+//                     if (this.initialLoad) {
+//                         return [];
+//                     }
                     return this.filteredTitles.length > 0 ? this.filteredTitles : this.titles;
                 }
             }
