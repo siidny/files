@@ -26,7 +26,7 @@
                 try {
                     const response = await axios.get(gsheetURL);
                     this.parseData(response);
-                    //this.initialLoad = false;
+                    this.initialLoad = false;
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
@@ -38,7 +38,7 @@
                     const query = this.searchInput.toLowerCase();
                     if (query.length < 1) {
                         this.filteredTitles = [];
-                        this.initialLoad = true;
+                        //this.initialLoad = true;
                         return;
                     }
                     this.filteredTitles = this.titles.filter(title => (
