@@ -38,7 +38,7 @@
                     const query = this.searchInput.toLowerCase();
                     if (query.length < 1) {
                         this.filteredTitles = [];
-                        //this.initialLoad = true;
+                        this.initialLoad = true;
                         return;
                     }
                     this.filteredTitles = this.titles.filter(title => (
@@ -77,9 +77,9 @@
                     return Math.ceil(this.titlesToDisplay.length / this.itemsPerPage);
                 },
                 titlesToDisplay() {
-//                     if (this.initialLoad) {
-//                         return [];
-//                     }
+                    if (this.initialLoad) {
+                        return [];
+                    }
                     return this.filteredTitles.length > 0 ? this.filteredTitles : this.titles;
                 }
             }
